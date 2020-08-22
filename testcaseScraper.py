@@ -76,7 +76,7 @@ def main():
 # @param html: HTMLを突っ込む
 # @return [[sample_input, sample_output], [..], []..]
 def extract_samples(html):
-    pattern = re.compile('<h3>[入出]力例 \d</h3><pre>([ \-\+\w\r\n]+)[\n\r]</pre>')
+    pattern = re.compile('<h3>[入出]力例 \d+</h3><pre>([^<]+)[\n\r]</pre>')
     return make_n_row_list(pattern.findall(html), 2)
 
 
