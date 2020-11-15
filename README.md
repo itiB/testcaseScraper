@@ -2,7 +2,31 @@
 
 AtCoderのテストケースを手打ちで作ってるのに激しく時間の無駄を感じたからスクレイピングして勝手に作ってもらうことにした
 
+## Usage
+
+```bash
+$ ./testcaseScraper.py <コンテスト名>
+```
+
+```bash
+$ ./testcaseScaner.py abc175
+```
+
 ## できあがるもの
+
+### Python用
+
+`config_python.py` を `config.py` に上書きするなりなんなりで使ってほしい  
+PythonのUnittestを用いたサンプル実行ができるようになる
+
+各問題のディレクトリに入って `main.py` にコードを書いたのちにテストを実行する  
+`main.py` の中には `main()` 関数を作っておくこと
+
+```
+$ ./sample_inputs.py
+```
+
+### Rust用
 
 Rustのproconioに対応したテストコードを作ってくれる。
 
@@ -23,16 +47,6 @@ fn sample1() {
     assert!(output.stderr_str().is_empty());
 }
 // FIN
-```
-
-## Usage
-
-```bash
-$ ./testcaseScraper.py <コンテスト名>
-```
-
-```bash
-$ ./testcaseScaner.py abc175
 ```
 
 ### Setting
